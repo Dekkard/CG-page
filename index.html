@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Trabalho T2 - VRML</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type='text/javascript' src='x3dom.js'> </script>
+<link rel='stylesheet' type='text/css' href='x3dom.css'>
+</link>
+
+</link>
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        padding: 2px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: aqua;
+    }
+
+    p {
+        text-align: justify
+    }
+</style>
+
+<body>
+    <div style=" float: left; position: fixed ; background-color:aquamarine; padding: 10px ;margin-left: 18px">
+        <h2 style="text-align: center">Menu</h2>
+        <ul style="list-style-type:none">
+            <li><a href="#Resumo">Resumo</a></li>
+            <li><a href="#Introdução">Introdução</a></li>
+            <li><a href="#Modelagem">Modelagem 3D</a></li>
+            <li><a href="#VRML">VRML</a></li>
+            <li><a href="#Utilização">&emsp;Utilização no mundo</a></li>
+            <li><a href="#Ambientes">&emsp;Ambientes</a></li>
+            <li><a href="#Linguagem">&emsp;A linguagem VRML</a></li>
+            <li><a href="#Requisitos">&emsp;Requisitos para executar</a></li>
+            <li><a href="#Padrões">&emsp;Padrões</a></li>
+            <li><a href="#Abordagem">Abordagem</a></li>
+            <li><a href="#Experimentos">Experimentos</a></li>
+            <li><a href="#Conclusões">Conclusões</a></li>
+            <li><a href="#Bibliografia">Bibliografia</a></li>
+        </ul>
+    </div>
+    <div style="margin: 0 auto ; padding: 15px ; width: 60%; background-color: lightblue;">
+        <h1 style="text-align:center;">Trabalho 2 de CG - VRML</h1>
+        <h2 style="text-align:center;">VRML - Virtual Reality Modeling Language</h2>
+        <h4 style="text-align:right;">Gustavo Rocha Flores</h4>
+        <h3 style="text-align:left;"><a name="Resumo"></a>Resumo</h3>
+        <p>
+            &emsp; O VRML é uma linguagem que contém informações sobre como se criar objetos em três dimenões, e seu
+            uso original era voltado para a Realidade Virtual, o compartilhamento de informações e de contado. Nesse
+            trabalho,
+            vamos abordar mais afundo sobre o dito cujo, sobre o seu funcionamento, sua estrutura, a modelagem 3d e
+            abordagens no mundo.
+            Mesmo sendo antigo, o VRML tem seu valor, por tratar de transformar conteúdo web em 3d.
+
+        </p>
+        <h3 style="text-align:left;"><a name="Introdução"></a>Introdução</h3>
+        <p style="text-align:justify">
+            &emsp; O VRML (<i>Virtual Reality Modeling Language</i>) é uma linguagem que descreve objetos
+            tridimensionais em uma Realidade Virtual para ser usada na <i>world wide web</i>, como páginas HTML são
+            para com textos, então a proposta do VRML é criar um mundo virtual compartilhado, onde pontêncializaria a
+            interação entre usuários, com um gráfico estruturado com a dimensão Z. Os usos do VRML poderiam ser para
+            gráficos em 3D, entretenimento, páginas web interativa, manufatura, científico, engenharia e educação. O
+            primeiro <i>release</i> do VRML foi criado pela <i>Web3D Consortium</i>, depois o VRML 2.0 foi
+            lançado e, mais tarde, lançou o X3D, considerado o sucessor do VRML. O seu corpo de texto trás informações
+            como vértices, materiais e texturas.
+        </p>
+        <h3 style="text-align:left;"><a name="Modelagem"></a>Modelagem 3D</h3>
+        <p>
+            &emsp; A modelagem dos objetos em 3D, a serem disponibilzados na página, fora feita no software de
+            Modelagem 3D de código aberto <i>Blender</i>, ferramenta que apresenta a totalidade do pipeline 3D. Tal
+            software apresenta conteúdo que pode ser adicionado, assim como exite um que permite exportar um modelo
+            feito na ferramenta para o formato <i>.wrl</i>, que é a extensão do VRML.
+        </p>
+        <h3 style="text-align:left;"><a name="VRML"></a>VRML</h3>
+        <h4 style="text-align:left;">&emsp;Considerações iniciais</h4>
+        <p>
+            &emsp; Mesmo que o VRML seja uma linguagem ultrapassada, já que existe o seu sucessor, o X3D, os seus
+            conceitos não deixam de ser interessantes, mesmo que hoje em dia temos outras ferramentas que são capazes
+            de realizar tal feito. O VRML é uma linguagem que não consome muito processamento e pode ter bom
+            rendimento, o bom uso das formas, sem extrapolar muito a poluição visual, pode ter um efeito bom
+            e atrativo.
+        </p>
+        <h4 style="text-align:left;"><a name="Utilização"></a>&emsp;Utilização no mundo</h4>
+        <p>
+            &emsp; As aplicações do VRML podem se extender à gráficos que podem ajudar na visualização de dados,
+            constriur figuras geométricas, construir objetos para a visualização antes de entrar em produção física,
+            criar designs com mais facilidade, entre outrasdiversas aplicações.</br>
+            &emsp; A ideia original do VRML era para ser usado em, assim como o html é, um ambiente onde se podia
+            compartilhar informações e trocar <i>hyperlinks</i>, como uma página web é hoje em dia, onde se pode entrar
+            em outros lugares ao clicar em links.
+        </p>
+        <h4 style="text-align:left;"><a name="Ambientes"></a>&emsp;Ambientes</h4>
+        <p>
+            &emsp; O ambiente do VRML são basicamente os <i>browsers</i>, os quais executam o código <i>.wrl</i>.
+            Neles onde é feita a tradução do código em objetos manipuláveis. Porém, o arquivo <i>.wrl</i> deve ser
+            tratado de forma apresentar corretamente.
+        </p>
+        <h4 style="text-align:left;"><a name="Linguagem"></a>&emsp;A linguagem VRML</h4>
+        <p>
+            &emsp; O VRML define o formato do arquivo para ser integrado, a princípio, o arqui <i>.wrl</i> é baseado em
+            tempo espaço 3D, contendo a os principais componentes que podem set modificados com uma variedade de
+            mecanismos, permitindo composição, encaspulamento e extenções. A semântica do VRML descreve um
+            comportamento funcional abstrato baseado em tempo, interatividade 3D e informações multimídia.
+            </br>&emsp; Cada arquivo VRML, estabelece as coordenadas do espaço, para todos os objetos definidos no
+            arquivo, as
+            composições e conjuntos de objetos 3D, os comportamentos e especifica <i>hyoerlinks</i> para outros
+            arquivos e aplicações. Por exemplo, um arquivo <i>.wrl</i>, com seu próprio sistema de coordenadas, pode
+            conter referências a outros arquivos, as quais teram seus sistemas também, logo, o primeiro arquivo será o
+            sistema de coordenadas global e os outros serão sistemas locais. Isso torna capaz a criação de mundos
+            maiores e mais dinâmicos.
+            </br>&emsp; A estrutura em si do VRML, começo com o <i>Header</i>, que facilita a identificação. O grafo de
+            cena irá conter nós que descrevem os objetos e as propriedades. Cada nó tem um tipo, diferenciadores,
+            eventos que envia ou recebe, implementação de como o objeto reage ao evento e o nome do nó.
+            </br>&emsp; O nó <i>Shape</i> associa a geometria com nós que definem sua aparência, e esse nó e que define
+            o resultado final do objeto. O <i>Shape</i> pode conter nós de formas prontas, como <i>Box</i>,<i>Cone</i>
+            e <i>Cylinder</i>, nós de propriedade, como <i>Coordinate</i>, <i>Color</i>, <i>Normal</i>, e <i>TextureCoordinate</i>.
+            </br>&emsp; O nó <i>Appearance</i> define a aparência o do objeto, dentro do <i>Shape</i>, sendo que pode
+            ter o nós como <i>Material</i>,
+            <i>ImageTexture</i>, <i>PixelTexture</i>, <i>MovieTexture</i>.
+
+        </p>
+        <h4 style="text-align:left;"><a name="Requisitos"></a>&emsp;Requisitos para executar</h4>
+        <p>
+            &emsp; Executar o VRMl exige um <i>browser</i> que seja capacitado para suportar tal formato. Quando se
+            pensava que o VRML iria ter proporções bem maiores do que se tem hoje em dia, areditava-se que todos os <i>browsers</i>
+            iriam ser feitos com o VRML já embutido, o que nunca ocorreu. A fim de que o <i>.wrl</i> seja executado
+            corretamente, deve-se baixar plugins que suportal tal aplicação. O plugin da <i>Cortona3D</i> provou-se um
+            excelênte para tal tarefa, por isso a execução dos códigos faz-se necessário instalar o dito cujo. Nos
+            arquivos provindênciados há um instalador, mas o arquivo pode ser baixado <a href="https://www.cortona3d.com/en/downloads">aqui</a>.
+            Vale lembrar que o este só funciona no Internet Explorer.
+        </p>
+        <h4 style="text-align:left;"><a name="Padrões"></a>&emsp;Padrões</h4>
+        <p>
+            &emsp; Um padrão do VRML básico é tal que:</br></br>
+
+            &emsp;#VRML V2.0 utf8 # header que define a codificação</br>
+
+            &emsp;Shape { # nó que começa a definição do objeto</br>
+            &emsp;&emsp;&emsp;appearance Appearance { # definição da aparência</br>
+            &emsp;&emsp;&emsp;material Material { # O tipo de material do objeto</br>
+            &emsp;&emsp;&emsp;}</br>
+            &emsp; &emsp;}</br>
+            &emsp;&emsp;geometry IndexedFaceSet { # Começo dos vértices</br>
+            &emsp;&emsp;&emsp;coord Coordinate { # Definição das coordenadas</br>
+            &emsp;&emsp;&emsp;&emsp;point [ ... ] # Aqui vão as coordenadas</br>
+            &emsp;&emsp;&emsp;}</br>
+            &emsp;&emsp;&emsp;&emsp;colorPerVertex FALSE # ou (TRUE), irá definir se cada vértice terá uma cor ou uma
+            cor por vértice</br>
+            &emsp;&emsp;&emsp;&emsp;color Color { # Começo da Definição de cores</br>
+            &emsp;&emsp;&emsp;&emsp;color [ ... ] # as cores</br>
+            &emsp;&emsp;&emsp;&emsp;colorIndex[ ... ] # indexadores de cores</br>
+            &emsp;&emsp;&emsp;&emsp;coordIndex[ ... ] # Coordenadas do indexadores</br>
+            &emsp;&emsp;&emsp;}</br>
+            &emsp;&emsp;}</br>
+            }</br>
+        </p>
+        <h3 style="text-align:left;"><a name="Abordagem"></a>VRML e o Mercado de Trabalho</h3>
+        <p>
+            &emsp; O VRML, por mais que a seja uma excelênte ferramenta, teve sua acensão e derrocada. Durante seus
+            anos promissores, uma das aplicações mais interessantes foi o uso do VRML em comerciais para criação de
+            banners com uso em sites. Fora isso, o VRML não foi usado em muitas aplicações, apenas promessas.
+            </br>&emsp; A ideia original do VRML era para ser usado como um espécie de chat virtual, onde as pessoas
+            poderiam se encontrar numa realidade virtual, poder interagir entre si e com o ambiente.
+        </p>
+        <h3 style="text-align:left;"><a name="Experimentos"></a>Experimentos</h3>
+        <p>
+            &emsp; Antes de visualizar o arquivo VRML, instale o plugin <i>Cortona3D</i>, disponível no site <a href="https://www.cortona3d.com/en/downloads">aqui</a>.</br></br>
+            <a href="Imagens/6.jpg"><img class="center" src="Imagens/6.jpg" alt="IMG-6" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;"> Download do plugin. Clique na imagem para ampliá-la</h6>
+            <a href="Imagens/7.jpg"><img class="center" src="Imagens/7.jpg" alt="IMG-7" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;"> Instalação do plugin. Clique na imagem para ampliá-la</h6>
+
+            &emsp; Como primeiro experimento do VRML, fora feito a logo do Instituto Federal de Brasília. A princípio
+            temos a tela inicial do software <i>Blender</i></br></br>
+            <a href="Imagens/1.jpg"><img class="center" src="Imagens/1.jpg" alt="IMG-1" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;"> Tela inícial do Blender. Clique na imagem para ampliá-la</h6>
+
+            &emsp; Utilizando como refenrência a logo do IFB, a qual esta disponível no <a href="https://www.ifb.edu.br">site</a>,
+            fora feito a logo em 3D</br></br>
+            <a href="Imagens/2.jpg"><img class="center" src="Imagens/2.jpg" alt="IMG-2" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;">Logo do IFB em 3D. Clique na imagem para ampliá-la</h6>
+
+            &emsp; Ao termino da modelagem, há de exportar a imagem para o formato <i>.wrl</i>. Para ativar o <i>add-on</i>
+            que exporta os modelos para VRML, Para tal, deve se ir File>User Preferences...>Add-ons, pesquise no campo
+            "VRMl" e ative <i>Import-Export: VRML2</i>. </br></br>
+            <a href="Imagens/5.jpg"><img class="center" src="Imagens/5.jpg" alt="IMG-5" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;">Ativação do <i>add-on</i>. Clique na imagem para ampliá-la</h6>
+
+            &emsp;Ao ativar o <i>add-on</i>,
+            selecionar o modelo que deseja exportar, ir em <i>File>Export>VRML2</i> </br></br>
+            <a href="Imagens/3.jpg"><img class="center" src="Imagens/3.jpg" alt="IMG-3" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;">Exportação para <i>.wrl</i>. Clique na imagem para ampliá-la</h6>
+
+            &emsp; Com o arquivo <i>.wrl</i> em mãos, a fim de apresentá-la no browser, usa-se as cláusulas
+            &lt;embed&gt; na página HTML, sendo o resultado final:</br></br>
+            <!-- Descomente esse código para visualizar em VRML, depois de ter instalado o plugin -->
+            <!-- <embed class="center" src="IFBlogo.wrl" height=300 width=300> -->
+            <div style="margin: 0 auto;">
+                <x3d width='500px' height='400px'>
+                    <scene>
+                        <inline url="IFBlogo.x3d"> </inline>
+                    </scene>
+                </x3d>
+            </div>
+            </br>&emsp;Para manipular o modelo, clique em examinar (olho) e com as setas ou com o botão esquero do
+            mouse mova-o. Segure <i>SHIFT</i> e/ou <i>CTRL</i> para aumentar a velocidade.</br> &emsp; Também há a
+            possibilidade de usar <a href="IFBlogo.wrl">link</a>, onde irá abrir uma nova página para manipular o
+            objeto, num ambiente mais amplo.
+        </p>
+        <h3 style="text-align:left;"><a name="Conclusões"></a>Conclusões</h3>
+        <p>
+            &emsp; O VRML, sem sombra de dúvidas, é deveras uma linguagem interessante, sendo capaz de integrar objetos
+            tridimensionais à páginas web, o que as tornam bastante interativa. Os seus conceitos, mesmo que hoje em
+            dia
+            já seja empregado largamente, na época era algo fascinante. O projeto do VRML pode ter sido descontinuado,
+            mas os seu sucessor ainda continua, e mais ferramentas ainda estao em desenvolvimento. Até o momento,
+            trabalhar
+            com o VRML não fora penoso, apesar de ter de instalar plugins para faze-lo funcionar, é bastante simples de
+            modelar algum objeto em uma ferramenta de modelagem 3d, exporta-los e aplica-los em uma página web, já que
+            hoje em dia temos computadores muitas vezes melhor dos da época, o processo de vizualização e manipulação
+            tornam fáceis. Para fins educacionais, o VRML pode ser util, mas voltado para o mercado, o X3D seria uma
+            opções
+            melhor, sendo mais flexivel e ágil.
+        </p>
+        <h3 style="text-align:left;"><a name="Bibliografia"></a>Bibliografia</h3>
+        <ul>
+            <li><a href="https://www.w3.org/People/Raggett/vrml/vrml.html">Extending WWW to support Platform
+                    Independent Virtual Reality</a></li>
+            <li><a href="https://web.archive.org/web/19990208021304/http://www.vrml.org:80/">Site do VRML de 1999</a></li>
+            <li><a href="https://www.clickz.com/the-rise-and-fall-of-vrml-part-1/74494/">The Rise and Fall of VRML:
+                    Part 1</a></li>
+            <li><a href="https://www.clickz.com/the-rise-and-fall-of-vrml-part-2/56594/">The Rise and Fall of VRML:
+                    Part 2</a></li>
+            <li><a href="https://blender.org/about/">Blender</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
