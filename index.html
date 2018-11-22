@@ -182,25 +182,38 @@
         </p>
         <h3 style="text-align:left;"><a name="Experimentos"></a>Experimentos</h3>
         <p>
+            &emsp; Antes de visualizar o arquivo VRML, instale o plugin <i>Cortona3D</i>, disponível no site <a href="https://www.cortona3d.com/en/downloads">aqui</a>.</br></br>
+            <a href="Imagens/6.jpg"><img class="center" src="Imagens/6.jpg" alt="IMG-6" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;"> Download do plugin. Clique na imagem para ampliá-la</h6>
+            <a href="Imagens/7.jpg"><img class="center" src="Imagens/7.jpg" alt="IMG-7" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;"> Instalação do plugin. Clique na imagem para ampliá-la</h6>
+
             &emsp; Como primeiro experimento do VRML, fora feito a logo do Instituto Federal de Brasília. A princípio
-            temos a tela inicial do software <i>Blender</i>
+            temos a tela inicial do software <i>Blender</i></br></br>
             <a href="Imagens/1.jpg"><img class="center" src="Imagens/1.jpg" alt="IMG-1" style="width: 50% ; height:50%;"></a>
             <h6 style="text-align:center;"> Tela inícial do Blender. Clique na imagem para ampliá-la</h6>
 
             &emsp; Utilizando como refenrência a logo do IFB, a qual esta disponível no <a href="https://www.ifb.edu.br">site</a>,
-            fora feito a logo em 3D</br>
+            fora feito a logo em 3D</br></br>
             <a href="Imagens/2.jpg"><img class="center" src="Imagens/2.jpg" alt="IMG-2" style="width: 50% ; height:50%;"></a>
             <h6 style="text-align:center;">Logo do IFB em 3D. Clique na imagem para ampliá-la</h6>
 
-            &emsp; Ao termino da modelagem, há de exportar a imagem para o formato <i>.wrl</i>. Para tal, deve se
-            selecionar o modelo que deseja exportar, ir em <i>File>Export>VRML2</i> </br>
+            &emsp; Ao termino da modelagem, há de exportar a imagem para o formato <i>.wrl</i>. Para ativar o <i>add-on</i>
+            que exporta os modelos para VRML, Para tal, deve se ir File>User Preferences...>Add-ons, pesquise no campo
+            "VRMl" e ative <i>Import-Export: VRML2</i>. </br></br>
+            <a href="Imagens/5.jpg"><img class="center" src="Imagens/5.jpg" alt="IMG-5" style="width: 50% ; height:50%;"></a>
+            <h6 style="text-align:center;">Ativação do <i>add-on</i>. Clique na imagem para ampliá-la</h6>
+
+            &emsp;Ao ativar o <i>add-on</i>,
+            selecionar o modelo que deseja exportar, ir em <i>File>Export>VRML2</i> </br></br>
             <a href="Imagens/3.jpg"><img class="center" src="Imagens/3.jpg" alt="IMG-3" style="width: 50% ; height:50%;"></a>
             <h6 style="text-align:center;">Exportação para <i>.wrl</i>. Clique na imagem para ampliá-la</h6>
 
             &emsp; Com o arquivo <i>.wrl</i> em mãos, a fim de apresentá-la no browser, usa-se as cláusulas
             &lt;embed&gt; na página HTML, sendo o resultado final:</br></br>
+            <!-- Descomente esse código para visualizar em VRML, depois de ter instalado o plugin -->
             <!-- <embed class="center" src="IFBlogo.wrl" height=300 width=300> -->
-            <div style="display: block;">
+            <div style="margin: 0 auto;">
                 <x3d width='500px' height='400px'>
                     <scene>
                         <inline url="IFBlogo.x3d"> </inline>
